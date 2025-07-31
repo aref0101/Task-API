@@ -33,6 +33,7 @@ var/
 # Ignore all SQLite databases to prevent committing local DB state
 *.sqlite3
 *.sqlite
+*db.sqlite3
 
 # Django specific
 *.log
