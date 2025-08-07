@@ -1,6 +1,8 @@
 from rest_framework import serializers
 from .models import Task
 from django.contrib.auth.models import User
+from django.contrib.auth.password_validation import validate_password
+
 
 class TaskSerializer(serializers.ModelSerializer):
     owner= serializers.ReadOnlyField(source= 'owner.username')
@@ -11,17 +13,12 @@ class TaskSerializer(serializers.ModelSerializer):
 
 
 class UserRegisterSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(write_only=True, min_length=4)
+    password= serializers.CharField(write_only= True, min_length=  8,
+    validators= [validate_password], style= {'input_type': 'password'})
 
     class Meta:
-        model = User
-        fields = ('username', 'email', 'password')
+        model= User
+        fields= ('username', 'password')
 
     def create(self, validated_data):
-        # Create user properly (encrypt password)
-        user = User.objects.create_user(
-            username=validated_data['username'],
-            email=validated_data.get('email', ''),
-            password=validated_data['password']
-        )
-        return user
+        return User.objects.create_user(**validated_data)

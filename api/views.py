@@ -30,4 +30,4 @@ class TaskViewSet(viewsets.ModelViewSet):
 
 
 class RegisterView(generics.CreateAPIView):
-    serializer_class = UserRegisterSerializer
+    serializer_class= UserRegisterSerializer
