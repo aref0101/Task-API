@@ -44,7 +44,9 @@ User registration and login are implemented using JSON Web Tokens (JWT) via Simp
 
 # 2. Create & activate a virtualenv
 python -m venv .venv
+
 source .venv/bin/activate      # macOS/Linux
+
 .venv\Scripts\activate         # Windows
 
 # 3. Install dependencies
@@ -52,8 +54,9 @@ pip install -r requirements.txt
 
 # 4. Configure environment variables
 SECRET_KEY=your-django-secret-key-avoid-using-‘django-insecure’
+
 DEBUG=True   # switch to False in prod
-ALLOWED_HOSTS=127.0.0.1,localhost
+ALLOWED_HOSTS=127.0.0.1, localhost
 
 # 5. python manage.py migrate
 python manage.py migrate
