@@ -56,6 +56,7 @@ pip install -r requirements.txt
 SECRET_KEY=your-django-secret-key-avoid-using-‘django-insecure’
 
 DEBUG=True   # switch to False in prod
+
 ALLOWED_HOSTS=127.0.0.1, localhost
 
 # 5. python manage.py migrate
