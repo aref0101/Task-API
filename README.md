@@ -1,6 +1,6 @@
 # Taskmaster API
 
-A Django REST Framework–based web API for creating, viewing, editing, and deleting to-do tasks. Only the authenticated owners are authorized to modify, delete and view their tasks. And only authenticated users are allowed to create tasks. The system includes user login and registration, JWT-based authentication, and a full suite of features such as pagination, filtering, search, ordering, request throttling, and API versioning. (There were 2 bugs in this project before, that were fixed: 1. Non Authenticated users were allowed to create task. 2. Everybody could see others's tasks)
+A Django REST Framework–based web API for creating, viewing, editing, and deleting to-do tasks. Only the authenticated owners are authorized to modify, delete and view their tasks. And only authenticated users are allowed to create tasks. The system includes user login and registration, JWT-based authentication, and a full suite of features such as pagination, filtering, search, ordering, request throttling, and API versioning. (There was one bug in this project before, that was fixed: Everybody was able see others's tasks)
 
 ---
 
